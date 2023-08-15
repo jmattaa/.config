@@ -74,8 +74,8 @@ bindsym $mod+p exec "rofi -show drun -config ~/.config/rofi/launchers/type-1/sty
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+b exec "qutebrowser"
-bindsym $mod+Shift+b exec "min"
+bindsym $mod+b exec "min"
+bindsym $mod+Shift+b exec "qutebrowser"
 
 bindsym $mod+q exec "~/.config/rofi/powermenu/type-3/powermenu.sh"
 
