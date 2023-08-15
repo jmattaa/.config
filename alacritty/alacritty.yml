@@ -42,4 +42,5 @@ key_bindings:
   - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: N,              mods: Control|Shift,                   chars: "nvim \x0D"       }
-
+  - { key: T,              mods: Control|Shift,                   chars: "tmux a \x0D"     }
+  - { key: T,              mods: Control|Alt,                     chars: "tn \x0D"         }
