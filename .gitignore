@@ -1,0 +1,18 @@
+# ignore everything
+/*
+/*/
+
+# except
+# folders to use 
+# start with !
+!/nvim/
+!/tmux/
+!/zsh/
+!/i3
+!/polybar
+!/alacritty
+!/qutebrowser
+!/dunst
+
+!.gitignore
+!README.md
