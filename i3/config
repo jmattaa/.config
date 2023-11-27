@@ -40,8 +40,8 @@ exec --no-startup-id nm-applet
 # start dunst notification manager
 exec --no-startup-id dunst
 
-# Set alt shift to toggle keyboard languages
-exec "setxkbmap -option 'grp:alt_shift_toggle' -layout us,se -variant qwerty"
+# Set alt shift to toggle keyboard languages and dvorak
+exec "setxkbmap -model pc105 -layout 'us(dvorak-intl),us,se' -option -option grp:alt_shift_toggle -option compose:rwin"
 
 gaps inner 5
 gaps outer 5
