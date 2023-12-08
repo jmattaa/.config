@@ -20,6 +20,7 @@
 # zsh
 zsh/.zsh_history
 zsh/.zsh_sessions/
+zsh/.zcompdump
 
 # tmux
 tmux/plugins/*
