@@ -1,0 +1,36 @@
+{
+    "hyprland": {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "persistant-workspaces": {
+            "*": 5
+        }
+    },
+    "hyprland/window": {
+        "separate-outputs": true
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "  {percentage_used}% ",
+        "path": "/",
+        "on-click": "alacritty -e htop"
+    }
+}

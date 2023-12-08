@@ -1,0 +1,158 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.8);
+    border-bottom: 0px solid #ffffff;
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+    background: #ffffff;
+    margin: 2px 1px 3px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 1px 9px;
+    margin: 3px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: #964b00;
+    background-color: #964b00;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+}
+
+#workspaces button.active {
+    color: #964b00;
+    background: #964b00;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1.0;
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: #964b00;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+    background: #ffffff;
+    margin: 5px 15px 5px 0px;
+    padding: 2px 10px 0px 10px;
+    border-radius: 12px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Taskbar
+ * ----------------------------------------------------- */
+
+#taskbar {
+    /* background: @color11; */
+    background: #FFFFFF;
+    margin: 3px 15px 3px 0px;
+    padding:0px;
+    /*padding: 2px 3px 1px 3px;*/
+    border-radius: 15px;
+    font-weight: normal;
+    font-style: normal;
+    opacity:0.8;
+    border: 3px solid #FFFFFF;
+}
+
+#taskbar button {
+    margin:0;
+    padding: 0px 5px 0px 5px;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 20px;
+    margin: 0px;
+}
+
+tooltip label {
+    color: #964b00;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 15px 5px 0px;
+    opacity: 0.8;
+}
+
+#pulseaudio.muted {
+    background-color: #964b00;
+    color: #ffffff;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #964b00;
+    border-radius: 15px;
+    padding: 1px 10px 0px 10px;
+    margin: 3px 15px 3px 0px;
+    opacity: 0.8;
+    border: 3px solid #ffffff;   
+}
+
+
+#disk {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: #0a0e0e;
+}
+

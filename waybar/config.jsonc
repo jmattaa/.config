@@ -1,0 +1,33 @@
+{
+    // general settings
+    "layer": "top",
+
+    // position TOP
+    "margin-top": 4,
+    "margin-bottom": 0,
+
+    // position BOTTOM
+    //"position": "bottom",
+    //"margin-top": 0,
+    //"margin-bottom": 4,
+
+    "height": 14,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-left": [
+        "wlr/taskbar",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "disk",
+        "pulseaudio",
+        "clock"
+    ]
+}

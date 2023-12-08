@@ -15,6 +15,7 @@
 !/qutebrowser/
 !/dunst/
 !/rofi/
+!/waybar/
 
 # ignore some more
 # zsh
