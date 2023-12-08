@@ -81,20 +81,18 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #taskbar {
-    /* background: @color11; */
     background: #FFFFFF;
     margin: 3px 15px 3px 0px;
-    padding:0px;
-    /*padding: 2px 3px 1px 3px;*/
+    padding: 0px;
     border-radius: 15px;
     font-weight: normal;
     font-style: normal;
-    opacity:0.8;
+    opacity: 0.8;
     border: 3px solid #FFFFFF;
 }
 
 #taskbar button {
-    margin:0;
+    margin: 0;
     padding: 0px 5px 0px 5px;
 }
 
@@ -148,10 +146,9 @@ tooltip label {
     border: 3px solid #ffffff;   
 }
 
-
 #disk {
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     font-size: 16px;
     color: #0a0e0e;
 }
