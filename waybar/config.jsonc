@@ -19,6 +19,7 @@
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": [
+        "hyprland/language",
         "wlr/taskbar",
         "hyprland/window"
     ],
