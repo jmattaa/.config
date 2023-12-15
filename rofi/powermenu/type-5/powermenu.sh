@@ -11,7 +11,7 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu/type-5"
-theme='style-1'
+theme='style-5'
 
 # CMDs
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
@@ -82,6 +82,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+            elif [[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]]; then
+                hyprctl dispatch exit
 			fi
 		fi
 	else
@@ -102,10 +104,22 @@ case ${chosen} in
 		run_cmd --hibernate
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
+		if [[ -x '/usr/bin/swaylock' ]]; then
+            swaylock \
+                --screenshots \
+                --clock \
+                --indicator \
+                --indicator-radius 100 \
+                --indicator-thickness 7 \
+                --effect-blur 7x5 \
+                --effect-vignette 0.5:0.5 \
+                --ring-color 011b10 \
+                --key-hl-color 133a1b \
+                --line-color 00000000 \
+                --inside-color 00000088 \
+                --separator-color 00000000 \
+                --grace 2 
+            \
 		fi
         ;;
     $suspend)
