@@ -12,3 +12,13 @@ alias fcd="source ~/.fcd/fcd"
 
 # alias thefuck
 eval $(thefuck --alias)
+
+lynx() {
+    /usr/bin/lynx -cfg="~/.config/lynx/lynx.cfg" -lss="~/.config/lynx/lynx.lss" "$@"
+}
+
+duck() {
+    lynx "https://lite.duckduckgo.com/lite?kd=-1&kp=-1&q=$@"
+}
+
+alias '?'=duck

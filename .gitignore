@@ -16,6 +16,7 @@
 !/dunst/
 !/rofi/
 !/waybar/
+!lynx/
 
 # ignore some more
 # zsh
