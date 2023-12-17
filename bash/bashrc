@@ -1,0 +1,22 @@
+#
+# bashrc
+#
+# in ~/.bashrc
+# $BASHRC = ~/.config/bash/
+# `source $BASHRC/bashrc`
+#
+
+# install with 
+# curl -sS https://starship.rs/install.sh | sh
+# starship prompt
+eval "$(starship init bash)"
+
+# starship config
+export STARSHIP_CONFIG="$BASHRC_DIR/starship.toml"
+
+# fzf tab completion
+source "$BASHRC_DIR/plugins/fzf-tab-completion/bash/fzf-bash-completion.sh"
+bind -x '"\t": fzf_bash_completion'
+
+# aliases  and functions
+source "$BASHRC_DIR/bash_aliases"
