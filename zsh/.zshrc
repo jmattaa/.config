@@ -1,3 +1,4 @@
+autoload -Uz compinit && compinit
 ## History file
 export HISTFILE=$HOME/.zsh_history
 # how many commands zsh will load to memory.
