@@ -40,3 +40,6 @@ lastcmdsudo() {
 
 zle -N lastcmdsudo
 bindkey '^[^[' lastcmdsudo
+
+# copy pwd and print pwd
+alias cpwd="pwd | xclip -selection clipboard && pwd"
