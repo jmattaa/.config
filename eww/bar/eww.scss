@@ -1,0 +1,31 @@
+$workspace-border-radius: 30px;
+$theme-primary: rgba(120, 255, 255, .2);
+$theme-alt: rgba(155, 255, 255, .4);
+
+* {
+  all: unset;
+  color: white;
+}
+
+.bar {
+  background-color: transparent;
+}
+
+
+// --------------------------------------------------
+//                  WORKSPACES                      |
+// --------------------------------------------------
+.workspaces {
+    padding: 0 .5em;
+    background-color: $theme-primary;
+    border-radius: $workspace-border-radius;
+}
+
+.workspace-entry {
+    padding: 0 2em;
+    border-radius: $workspace-border-radius;
+}
+
+.workspaces .current {
+    background-color: $theme-alt;
+}
