@@ -1,8 +1,25 @@
 (defwidget bar []
- (centerbox :orientation "h"
+ (box :orientation "h"
+  (left_stuff)
+  (center_stuff)
+  (right_stuff))
+ )
+
+
+(defwidget left_stuff [] 
+ (box 
   (workspaces)
-  "hello"
-  "test"))
+ ))
+
+(defwidget center_stuff []
+ (box
+  (current_win_title)
+ ))
+
+(defwidget right_stuff []
+ (box
+  (time)
+ ))
 
 ;; --------------------------------------------------
 ;;                  WORKSPACES                      |
@@ -14,13 +31,13 @@
  current_workspace 
  :initial "1" "bash ~/.config/eww/bar/scripts/get-active-workspace")
 (defwidget workspaces []
- (box :halign "center"
+ (box :halign "start"
   :class "workspaces"
   (label :text "${workspaces}${current_workspace}" :visible false)
   (for workspace in workspaces
    (eventbox 
-    :visible 
-    "${workspace.windows > 0 || 
+    :cursor "pointer"
+    :visible "${workspace.windows > 0 || 
     workspace.id == current_workspace ? "true" : "false"}"
     :onclick "hyprctl dispatch workspace ${workspace.id}"
     (box 
@@ -30,15 +47,39 @@
     )
    )
   )
- )
- )
+ ))
 
+;; --------------------------------------------------
+;;                WINDOW TITLE                      |
+;; --------------------------------------------------
+(deflisten window :initial "..." 
+ "bash ~/.config/eww/bar/scripts/get-window-title")
+(defwidget current_win_title []
+ (box
+  :class "win-title"
+  (label :text "${window}")
+ ))
 
+;; --------------------------------------------------
+;;                 TIME                             |
+;; --------------------------------------------------
+(defpoll time :interval "20s"
+ `date +"%H:%M"`)
+(defwidget time []
+ (box
+  :halign "end"
+  :class "time"
+  (label :text "${time}")
+ ))
+
+;; --------------------------------------------------
+;;                THE BAR                           |
+;; --------------------------------------------------
 (defwindow bar
  :monitor 0
  :geometry (geometry :x "0%"
      :y "0%"
-     :width "100%"
+     :width "99%"
      :height "32px"
      :anchor "top center")
  :exclusive true

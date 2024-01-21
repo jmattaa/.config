@@ -1,6 +1,7 @@
-$workspace-border-radius: 30px;
-$theme-primary: rgba(120, 255, 255, .2);
-$theme-alt: rgba(155, 255, 255, .4);
+$border-radius: .2em;
+$theme-primary: darken(#2dbd7d, 15%);
+$theme-alt: darken(#2b9b6d, 10%);
+$padding-size-mult: 1.5;
 
 * {
   all: unset;
@@ -16,16 +17,34 @@ $theme-alt: rgba(155, 255, 255, .4);
 //                  WORKSPACES                      |
 // --------------------------------------------------
 .workspaces {
-    padding: 0 .5em;
-    background-color: $theme-primary;
-    border-radius: $workspace-border-radius;
+    padding:.25em * $padding-size-mult;
+    background-color: rgba($theme-primary, .4);
+    border-radius: $border-radius;
 }
 
 .workspace-entry {
-    padding: 0 2em;
-    border-radius: $workspace-border-radius;
+    background-color: transparent; 
+    padding: .25em * $padding-size-mult 1em * $padding-size-mult;
+    border-radius: $border-radius;
 }
 
-.workspaces .current {
-    background-color: $theme-alt;
+.workspace-entry.current {
+    background-color: rgba($theme-alt, .6);
+}
+
+// --------------------------------------------------
+//                WINDOW TITLE                      |
+// --------------------------------------------------
+.win-title {
+    font-size: 1.15em;
+}
+
+// --------------------------------------------------
+//                 TIME                             |
+// --------------------------------------------------
+.time {
+    font-size: 1.15em;
+    background-color: rgba($theme-primary, .95);
+    padding: .25em * $padding-size-mult 1em * $padding-size-mult;
+    border-radius: $border-radius;
 }
