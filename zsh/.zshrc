@@ -37,3 +37,6 @@ SPACESHIP_CHAR_SUFFIX=" "
 
 ## Aliases
 source "$ZDOTDIR/aliases.zsh"
+
+## zoxide eval
+eval "$(zoxide init zsh)"
