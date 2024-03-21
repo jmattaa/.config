@@ -64,7 +64,8 @@ config.set('content.cookies.accept', 'all', 'devtools://*')
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+config.set('content.headers.accept_language',
+           '', 'https://matchmaker.krunker.io/*')
 
 # Geolocation in localhost
 config.set('content.geolocation', True, 'https://localhost:*')
@@ -83,7 +84,8 @@ config.set('content.geolocation', True, 'https://localhost:*')
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -99,7 +101,8 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -115,7 +118,8 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 
 # Load images automatically in web pages.
 # Type: Bool
@@ -156,11 +160,12 @@ config.set('content.notifications.enabled', True, 'https://www.youtube.com')
 #   - true
 #   - false
 #   - ask
-config.set('content.register_protocol_handler', True, 'https://mail.google.com?extsrc=mailto&url=%25s')
+config.set('content.register_protocol_handler', True,
+           'https://mail.google.com?extsrc=mailto&url=%25s')
 
 
-#darkmode
-config.set('colors.webpage.darkmode.enabled', False)
+# darkmode
+config.set('colors.webpage.darkmode.enabled', True)
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
@@ -175,7 +180,8 @@ c.downloads.location.directory = '~/Downloads'
 #   - bookmarks
 #   - history
 #   - filesystem
-c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
+c.completion.open_categories = [
+    'searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -200,26 +206,15 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = 'https://jmattaa.github.io/startlaunch'
+c.url.start_pages = 'https://duckduckgo.com'
 
-c.url.default_page = 'https://jmattaa.github.io/startlaunch'
+c.url.default_page = 'https://duckduckgo.com'
 
 # Statusbar settings
 c.statusbar.show = 'in-mode'
 c.statusbar.position = 'top'
 
-
-c.tabs.show = 'always'
-
-# Use dracula theme
-import dracula.draw
-
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
+c.tabs.show = 'switching'
 
 # Map keys to other keys, so that they are equivalent in all modes. When
 # the key used as dictionary-key is pressed, the binding for the key
@@ -234,4 +229,19 @@ dracula.draw.blood(c, {
 # key. Note that when a key is bound (via `bindings.default` or
 # `bindings.commands`), the mapping is ignored.
 # Type: Dict
-c.bindings.key_mappings = {'<Ctrl+6>': '<Ctrl+^>', '<Ctrl+Enter>': '<Ctrl+Return>', '<Ctrl+[>': '<Escape>', '<Ctrl+i>': '<Tab>', '<Ctrl+j>': '<Return>', '<Ctrl+m>': '<Return>', '<Enter>': '<Return>', '<Shift+Enter>': '<Return>', '<Shift+Return>': '<Return>'}
+c.bindings.key_mappings = {
+    '<Ctrl+6>': '<Ctrl+^>',
+    '<Ctrl+Enter>': '<Ctrl+Return>',
+    '<Ctrl+[>': 'H',
+    '<Ctrl+]>': 'L',
+    '<Ctrl+i>': '<Tab>',
+    '<Ctrl+j>': '<Return>',
+    '<Ctrl+m>': '<Return>',
+    '<Enter>': '<Return>',
+    '<Shift+Enter>': '<Return>',
+    '<Shift+Return>': '<Return>'
+}
+
+
+# set theme
+config.source('themes/minimal/base16-gruvbox-material-dark-hard.config.py')
