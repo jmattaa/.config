@@ -2,5 +2,5 @@
 
 #### do dis to setup the ting correctly
 ```bash
-sudo pacman -S nitrogen dunst xdotool jq
+sudo pacman -S nitrogen dunst xdotool jq picom
 ```
