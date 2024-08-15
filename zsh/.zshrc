@@ -40,3 +40,6 @@ source "$ZDOTDIR/aliases.zsh"
 
 ## zoxide eval
 eval "$(zoxide init zsh)"
+
+## SET PATH
+PATH=$PATH:/home/jonathan/.cargo/bin
