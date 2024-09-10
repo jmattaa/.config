@@ -16,3 +16,6 @@
 [submodule "spaceship-prompt"]
     path = zsh/themes/spaceship-prompt
     url = https://github.com/spaceship-prompt/spaceship-prompt
+[submodule "kitty"]
+	path = kitty
+	url = https://github.com/jmattaa/kitty.conf
