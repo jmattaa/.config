@@ -1,34 +1,18 @@
 {
-    // general settings
     "layer": "top",
-
-    // position TOP
-    "margin-top": 4,
-    "margin-bottom": 0,
-
-    // position BOTTOM
-    //"position": "bottom",
-    //"margin-top": 0,
-    //"margin-bottom": 4,
-
-    "height": 14,
-    "margin-left": 0,
-    "margin-right": 0,
-    "spacing": 0,
+    "position": "top",
 
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": [
-        "hyprland/language",
-        "wlr/taskbar",
-        "hyprland/window"
+        "hyprland/workspaces",
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/window",
     ],
     "modules-right": [
-        "disk",
+        "network",
         "pulseaudio",
-        "clock"
-    ]
-}
+        "clock",
+    ],
+},

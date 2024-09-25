@@ -2,166 +2,47 @@
     font-family: "JetBrainsMono Nerd Font";
     border: none;
     border-radius: 0;
-}
+    font-size: 13px;
 
-window#waybar {
-    background-color: rgba(0,0,0,0.8);
-    border-bottom: 0px solid #ffffff;
-    background: transparent;
-    transition-property: background-color;
-    transition-duration: 500ms;
-}
-
-/* -----------------------------------------------------
- * Workspaces 
- * ----------------------------------------------------- */
-
-#workspaces {
-    background: #efffea;
-    margin: 2px 1px 3px 1px;
-    padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px;
-    font-weight: bold;
-    font-style: normal;
-    opacity: 0.7;
-    font-size: 16px;
+    margin: 1px;
 }
 
 #workspaces button {
-    padding: 1px 9px;
-    margin: 3px 3px;
-    border-radius: 15px;
-    border: 0px;
-    color: #964b00;
-    background-color: #e0ffea;
-    transition: all 255ms ease-in-out;
-    opacity: 0.4;
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
 }
 
 #workspaces button.active {
-    color: #964b00;
-    background: #964b00;
-    border-radius: 15px;
-    min-width: 40px;
-    transition: all 255ms ease-in-out;
-    opacity: 1.0;
+    padding: 0 5px 0 1px;
+    color: #ced5d9;
+    border-top: 2px solid #ced9d5;
 }
 
-#workspaces button:hover {
-    color: #ffffff;
-    background: #964b00;
-    border-radius: 15px;
-    opacity: 0.7;
+window#waybar {
+    background: transparent;
+    color: white;
 }
-
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
 
 #window {
-    background: #efffea;
-    margin: 5px 15px 5px 0px;
-    padding: 2px 10px 0px 10px;
-    border-radius: 12px;
-    color: #0a0e0e;
-    font-size: 16px;
-    font-weight: normal;
-    opacity: 0.7;
+    font-weight: bold;
 }
 
-window#waybar.empty #window {
-    background-color: transparent;
+#network {
+    margin: 0 12px;
 }
-
-/* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-    background: #efffea;
-    margin: 3px 15px 3px 0px;
-    padding: 0px;
-    border-radius: 15px;
-    font-weight: normal;
-    font-style: normal;
-    opacity: 0.7;
-}
-
-#taskbar button {
-    margin: 0;
-    padding: 0px 5px 0px 5px;
-}
-
-/* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
-
-tooltip {
-    border-radius: 10px;
-    background-color: #ffffff;
-    opacity: 0.7;
-    padding: 20px;
-    margin: 0px;
-}
-
-tooltip label {
-    color: #964b00;
-}
-
-/* -----------------------------------------------------
- * Pulseaudio
- * ----------------------------------------------------- */
 
 #pulseaudio {
-    background-color: #ffffff;
-    font-size: 16px;
-    color: #ffffff;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    opacity: 0.7;
+    margin: 0 12px;
 }
 
 #pulseaudio.muted {
-    background-color: #964b00;
-    color: #ffffff;
+    color: #ce9d5d;
 }
-
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
 
 #clock {
-    background-color: #efffea;
-    font-size: 16px;
-    color: #964b00;
-    border-radius: 15px;
-    padding: 1px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.7;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-#disk {
-    background-color: #efffea;
-    font-size: 16px;
-    color: #0a0e0e;
-    border-radius: 15px;
-    padding: 1px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.5;
-}
-
-/* -----------------------------------------------------
- * Keyboard language 
- * ----------------------------------------------------- */
-
-#language {
-    background-color: #efffea;
-    font-size: 16px;
-    color: #0a0e0e;
-    border-radius: 15px;
-    padding: 1px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.5;
-}
