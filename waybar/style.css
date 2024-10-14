@@ -21,7 +21,7 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: rgba(32, 23, 24, .5);
     color: white;
 }
 
