@@ -4,18 +4,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/jmattaa/tmux.conf
-[submodule "fast-syntax-highlighting"]
-    path = zsh/plugins/fast-syntax-highlighting
-    url = https://github.com/zdharma-continuum/fast-syntax-highlighting
-[submodule "fzf-tab"]
-    path = zsh/plugins/fzf-tab
-    url = https://github.com/Aloxaf/fzf-tab
-[submodule "zsh-autosuggestions"]
-    path = zsh/plugins/zsh-autosuggestions
-    url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "spaceship-prompt"]
-    path = zsh/themes/spaceship-prompt
-    url = https://github.com/spaceship-prompt/spaceship-prompt
 [submodule "kitty"]
 	path = kitty
 	url = https://github.com/jmattaa/kitty.conf
