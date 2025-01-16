@@ -10,3 +10,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = https://github.com/jmattaa/zsh
+[submodule "ghostty"]
+	path = ghostty
+	url = https://github.com/jmattaa/ghostty-conf
