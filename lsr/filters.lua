@@ -3,4 +3,5 @@ L_filters = {
     large = function(entry) return entry.size > 1024 * 1024 end,
     small = function(entry) return entry.size < 1024 * 1024 end,
     me = function(entry) return entry.owner == "jonathan" end,
+    changed = function (entry) return entry.git_status ~= "" end,
 }
