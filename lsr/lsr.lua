@@ -18,6 +18,6 @@ L_default_args = {
     directories = true,
     symlinks = true,
     git = false,
-    long = true,
+    long = false,
     filters = {},
 }
