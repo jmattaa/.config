@@ -4,10 +4,12 @@
 }
 
 window {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
+    font-family: "VictorMono Nerd Font";
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 16px;
 
-    background-color: rgba(0, 0, 0, .9);
+    background-color: #000;
     color: white;
 
     margin: 1px;
@@ -18,17 +20,26 @@ window {
 
     padding: .6em;
 
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #000;
     color: white;
+
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#input:focus {
+    box-shadow: inset 0 0 0 2px #bea;
 }
 
 #entry {
-    transition: all 225ms ease-in-out;
+    transition: padding 225ms ease-in-out;
 }
 
 #entry:selected {
     padding: 1em;
-    background: linear-gradient(90deg, #bcd, #cad);
+    background-color: #bea;
+    outline: none;
 }
 
 #text:selected {
