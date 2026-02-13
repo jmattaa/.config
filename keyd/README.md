@@ -3,5 +3,5 @@
 ```bash
 # install keyd from https://github.com/rvaiya/keyd
 
-ln -s ~/.config/default.conf /etc/keyd/default.conf 
+ln -s ~/.config/keyd/default.conf /etc/keyd/default.conf 
 ```
