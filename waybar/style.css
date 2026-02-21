@@ -1,38 +1,27 @@
 * {
     font-family: "VictorMono Nerd Font", monospace;
-    font-style: italic;
-    border: none;
-    font-size: 12px;
-    padding: .2em;
+    font-size: x-small;
+    font-weight: 900;
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, .9);
     color: #e0e0e0;
 }
 
-#window {
-    font-weight: 600;
-}
-
-#workspaces {
-    padding: 0 0.4em;
-}
-
 #workspaces button {
-    padding: 0 6px;
-    color: #c0c0c0;
+    color: #e0e0e0;
     border-top: 2px solid transparent;
     transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-    color: #fff;
+    color: #e0e0e0;
 }
 
 #workspaces button.active {
-    border-top: 2px solid #fff;
-    color: #fff;
+    border-top: 2px solid #e0e0e0;
+    color: #e0e0e0;
 }
 
 #pulseaudio.muted {
@@ -41,7 +30,6 @@ window#waybar {
 
 .modules-right {
     padding: 0.3em 0.7em;
-    font-weight: 500;
 }
 
 .modules-right * {
