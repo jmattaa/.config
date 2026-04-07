@@ -1,4 +1,4 @@
-theme = Vesper
+config-file = ./theme
 font-family = "VictorMono Nerd Font"
 font-size = 12
 window-decoration = false
