@@ -5,28 +5,27 @@
         "format-icons": {
             "active": "",
             "default": "",
-            "urgent": "",
-        },
+            "urgent": ""
+        }
     },
 
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) 󰖩",
         "format-disconnected": "Disconnected 󰖪",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
 
     "pulseaudio": {
-
         "format": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": {
-            "default": ["", "", ""],
+            "default": ["", "", ""]
         },
-        "on-click": "amixer set Master toggle",
+        "on-click": "amixer set Master toggle"
     },
 
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-    },
+        "format-alt": "{:%Y-%m-%d}"
+    }
 }

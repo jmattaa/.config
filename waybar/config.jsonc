@@ -1,18 +1,19 @@
 {
-    "layer": "top",
+    "layer": "overlay",
     "position": "top",
+    "height": 20,
 
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window",
+        "hyprland/window"
     ],
     "modules-right": [
         "network",
         "pulseaudio",
-        "clock",
-    ],
-},
+        "clock"
+    ]
+}
