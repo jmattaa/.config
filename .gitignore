@@ -9,20 +9,13 @@
 !/tmux/
 !/zsh/
 !/bash/
-!/i3/
-!/polybar/
 !/hypr/
-!/alacritty/
 !/dunst/
-!/rofi/
 !/wofi/
 !/waybar/
-!lynx/
 !/keyd/
-!/kitty/
 !/lsr/
 !/ghostty/
-!/quickshell/
 !/zls.json
 
 # ignore some more
@@ -33,7 +26,6 @@ zsh/.zcompdump
 
 # tmux
 tmux/plugins/*
-
 
 # my plugin :>
 .quickmarks
