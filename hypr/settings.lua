@@ -1,3 +1,5 @@
+require "waybar"
+
 hl.monitor {
     output = "",
     mode = "preferred",

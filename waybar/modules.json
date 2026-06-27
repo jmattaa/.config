@@ -9,10 +9,18 @@
         }
     },
 
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 40,
+        "separator": false
+    },
+
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
-        "format-disconnected": "Disconnected 󰖪",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "{essid} 󰖩",
+        "format-ethernet": "",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "on-click": "notify-send 'not yet implemented, yuh'"
     },
 
     "pulseaudio": {
@@ -21,11 +29,20 @@
         "format-icons": {
             "default": ["", "", ""]
         },
-        "on-click": "amixer set Master toggle"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
     },
 
     "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a, %b %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip": true
+    },
+
+    "custom/shutdown": {
+        "format": "⏻",
+        "on-click": "shutdown now"
     }
 }
